@@ -10,7 +10,6 @@ body{
     width: 100vw;
     height: 100vh;
     font-size: 16px;
-    text-transform: capitalize;
 }
 .container{
     width: 100%;
@@ -20,18 +19,26 @@ body{
     justify-content: center;
     align-items: center;
 }
-.container input[type='text'],
-input[type='text']:disabled{
+.container .input-group input[type='text'],
+input[type='text']:disabled, 
+#copy-btn{
     background-color: white;
     color: gray;
     border: black;
     border-radius: 0.25rem;
     padding: 0.5rem 1rem;
     margin: 1rem 0;
+    font-size: 14px;
+    
 }
-.container button{
-    padding: 1rem 3rem;
-    margin: 1rem 0;
+#copy-btn {
+    cursor: pointer;
+}
+
+
+.container #change-btn{
+    padding: 0.7rem 5rem;
+    /* margin: 1rem 0; */
     outline: none;
     background-color: black;
     color: white;
@@ -41,7 +48,7 @@ input[type='text']:disabled{
     font-family: 'Roboto', sans-serif;
     text-transform: capitalize;
 }
-.container button:hover{
+.container #change-btn:hover{
     background-color: white;
     color: black;
     border: 1px solid black;
@@ -51,4 +58,5 @@ input[type='text']:disabled{
 .container h1{
     text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white, 1px -1px 0 white;
     text-align: center;
+    text-transform: capitalize;
 }

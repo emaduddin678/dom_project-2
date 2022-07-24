@@ -7,16 +7,24 @@ window.onload = () => {
 
 function main(){
     const root = document.getElementById("root");
-    const btn = document.getElementById("change-btn");
+    const changeBtn = document.getElementById("change-btn");
     const output = document.getElementById("output");
+    const copyBtn = document.getElementById("copy-btn");
 
-    btn.addEventListener('click', function() {
+    changeBtn.addEventListener('click', function() {
         const bgColor = generateRGB();
 
         root.style.backgroundColor = bgColor;
         // output.value = bgColor;
         output.value = bgColor.toUpperCase();
+    });
+
+    copyBtn.addEventListener('click', function() {
+        window.navigator.clipboard.writeText(output.value);
     })
+
+
+
 }
 
 // step=2 random color generator function 
