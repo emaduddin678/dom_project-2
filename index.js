@@ -28,7 +28,7 @@ function main(){
             div = null;
         };   
 
-        generateToastmsg(`(${output.value}) color code copied`);
+        generateToastmsg(`${output.value} Copied`);
     });
 
 
