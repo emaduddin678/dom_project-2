@@ -27,11 +27,21 @@ function main(){
             div.remove();
             div = null;
         };   
+        if(isValid(output.value)){
+            generateToastmsg(`${output.value} Copied`);
+        } else {
+            alert("Invalid color code");
+        }
 
-        generateToastmsg(`${output.value} Copied`);
+        
     });
 
-
+    output.addEventListener('keyup', function(event) {
+        const color = event.target.value;
+        if(color && isValid(color)) {
+            root.style.backgroundColor = color;
+        }
+    })
  
 }
 
@@ -67,8 +77,16 @@ function generateToastmsg(msg) {
     document.body.appendChild(div);
 }
 
+/**
+ * @param {string} color : ;
+*/
 
 
+function isValid(color){
+    if (/^#[0-9a-f]{3}([0-9a-f]{3})?$/i.test(color)) {
+        return true;
+    }
+}
 
 
 
