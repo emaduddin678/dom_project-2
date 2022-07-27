@@ -22,7 +22,10 @@ body{
 }
 
 .container .input-group{
-    /* display: flex; */
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* gap: 0.5rem; */
 }
 .container .input-group input[type='text'],
 input[type='text']:disabled, 
@@ -30,15 +33,37 @@ input[type='text']:disabled,
     background-color: white;
     color: gray;
     border: black;
-    border-radius: 0.25rem;
     padding: 0.5rem 1rem;
     margin: 1rem 0;
     font-size: 14px;
-    
+    border-radius: 0.25rem;
 }
+
 #copy-btn {
     cursor: pointer;
+    border-radius: 0.25rem;
+    margin-left: 0.5rem;
 }
+
+.container .input-group .input-icon{
+    position: absolute;
+    padding: 0.48rem;
+    font-size: 14px;
+    background-color: #ddd;
+	color: #424242;
+	border-top-left-radius: 0.25rem;
+	border-bottom-left-radius: 0.25rem;
+} 
+#output {
+    margin-left: 1rem;
+}
+
+#output:focus {
+    outline: none;
+    border: none;
+}
+
+
 
 .toast-message {
     position: fixed;

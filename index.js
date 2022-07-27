@@ -18,7 +18,7 @@ function main(){
 
         root.style.backgroundColor = bgColor;
         // output.value = bgColor;
-        output.value = bgColor.toUpperCase();
+        output.value = bgColor.toUpperCase().substring(1);
     });
 
     copyBtn.addEventListener('click', function() {
@@ -28,7 +28,7 @@ function main(){
             div = null;
         };   
         if(isValid(output.value)){
-            generateToastmsg(`${output.value} Copied`);
+            generateToastmsg(`#${output.value} Copied`);
         } else {
             alert("Invalid color code");
         }
@@ -39,7 +39,7 @@ function main(){
     output.addEventListener('keyup', function(event) {
         const color = event.target.value;
         if(color && isValid(color)) {
-            root.style.backgroundColor = color;
+            root.style.backgroundColor = `#${color}`;
         }
     })
  
@@ -71,8 +71,6 @@ function generateToastmsg(msg) {
             div = null;
         });
     });
-
-
 
     document.body.appendChild(div);
 }
