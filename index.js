@@ -33,7 +33,6 @@ function main(){
             alert("Invalid color code");
         }
 
-        
     });
 
     output.addEventListener('keyup', function(event) {
