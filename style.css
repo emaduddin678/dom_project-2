@@ -18,6 +18,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+}
+
+.container .input-group{
+    /* display: flex; */
 }
 .container .input-group input[type='text'],
 input[type='text']:disabled, 

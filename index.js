@@ -83,7 +83,7 @@ function generateToastmsg(msg) {
 
 
 function isValid(color){
-    if (/^#[0-9a-f]{3}([0-9a-f]{3})?$/i.test(color)) {
+    if (/^[0-9a-f]{3}([0-9a-f]{3})?$/i.test(color)) {
         return true;
     }
 }
