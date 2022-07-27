@@ -22,7 +22,7 @@ function main(){
     });
 
     copyBtn.addEventListener('click', function() {
-        window.navigator.clipboard.writeText(output.value);
+        window.navigator.clipboard.writeText(`#${output.value}`);
         if(div !== null) {
             div.remove();
             div = null;
